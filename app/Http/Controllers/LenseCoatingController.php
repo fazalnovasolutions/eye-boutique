@@ -33,17 +33,17 @@ class LenseCoatingController extends Controller
 
     public function coating_save(Request $request){
         Coating::create($request->all());
-        return redirect()->back()->with('success','Lens Created Successfully');
+        return redirect()->back()->with('success','Coating Created Successfully');
     }
 
     public function coating_update(Request $request){
         Coating::find($request->id)->update($request->all());
-        return redirect()->back()->with('success','Lens Updated Successfully');
+        return redirect()->back()->with('success','Coating Updated Successfully');
     }
 
     public function coating_delete(Request $request){
         Coating::find($request->id)->delete();
-        return redirect()->back()->with('danger','Lens Deleted Successfully');
+        return redirect()->back()->with('danger','Coating Deleted Successfully');
     }
 
     public function getLenses(){
