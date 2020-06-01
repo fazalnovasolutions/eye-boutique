@@ -16,5 +16,6 @@ Route::group(['middleware' => ['auth.shopify']], function () {
     Route::get('/getCoatings', 'LenseCoatingController@getCoatings')->name('coatings.all');
 });
 
+Route::post('/place/order', 'HelperController@place_order')->name('place.order');
 
 
